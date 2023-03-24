@@ -1,0 +1,8 @@
+stages:
+  - test
+run unit test:
+  tags: [docker]
+  image: 316857779566.dkr.ecr.${GITLAB_AWS_REGION}.amazonaws.com/tsg/node:16-alpine-ci
+  script:
+    - npm install
+    - npm run test
